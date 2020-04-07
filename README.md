@@ -1,3 +1,12 @@
+# COVID-19 Tracker
+An application built using React.js, Chart.js, and Material UI to visually track the spread of COVID-19 across the globe.
+
+Followed a JavaScript Mastery tutorial on YouTube: https://www.youtube.com/watch?v=khJlrj3Y6Ls&t=345s. He does such great tutorials.
+
+## Screenshots
+
+!['something'](url)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
