@@ -5,7 +5,12 @@ Followed a JavaScript Mastery tutorial on YouTube: https://www.youtube.com/watch
 
 ## Screenshots
 
-!['something'](url)
+### Global card stats
+!['Global'](https://github.com/QuintonEL/COVID-19-Tracker/blob/master/docs/global.png?raw=true)
+### Global Graph
+!['Global Line Graph'](https://github.com/QuintonEL/COVID-19-Tracker/blob/master/docs/line-graph.png?raw=true)
+### Country Bar Graph
+!['Country Bar Graph'](https://github.com/QuintonEL/COVID-19-Tracker/blob/master/docs/country-specific.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
