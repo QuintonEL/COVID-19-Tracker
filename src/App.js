@@ -69,7 +69,7 @@ class App extends Component {
           }
         },
         "size": {
-          "value": 30,
+          "value": 20,
           "random": false,
           "anim": {
             "enable": true,
@@ -104,11 +104,11 @@ class App extends Component {
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": true,
+            "enable": false,
             "mode": "repulse"
           },
           "onclick": {
-            "enable": true,
+            "enable": false,
             "mode": "push"
           },
           "resize": true
