@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import  { Cards, Chart, CountryPicker } from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
 
 import coronaImg from './images/image.png';
+import Particles from 'react-particles-js';
+import corona from './images/covid.png'
 
 class App extends Component {
   state = {
@@ -27,11 +29,124 @@ class App extends Component {
   render() {
     const { data, country } = this.state;
     return(
-      <div className={styles.container}>
-        <img className={styles.image} src={coronaImg} alt='COVID-19'/>
-        <Cards data={data} />
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country}/>
+      <div>
+<Particles className={styles.canvas}
+    params={{
+      "particles": {
+        "number": {
+          "value": 6,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#1b1e34"
+        },
+        "shape": {
+          "type": "image",
+          "stroke": {
+            "width": 0,
+            "color": "#000"
+          },
+          "polygon": {
+            "nb_sides": 6
+          },
+          "image": {
+            "src": "https://cdn2.iconfinder.com/data/icons/coronavirus-15/1024/coronavirus-512.png",
+            "width": 10,
+            "height": 10
+          }
+        },
+        "opacity": {
+          "value": 0.3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 30,
+          "random": false,
+          "anim": {
+            "enable": true,
+            "speed": 10,
+            "size_min": 40,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 200,
+          "color": "#ffffff",
+          "opacity": 1,
+          "width": 2
+        },
+        "move": {
+          "enable": true,
+          "speed": 8,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    }} />
+        <div className={styles.container}>
+          <img className={styles.image} src={coronaImg} alt='COVID-19'/>
+          <Cards data={data} />
+          <CountryPicker handleCountryChange={this.handleCountryChange} />
+          <Chart data={data} country={country}/>
+        </div>
       </div>
     )
   }
