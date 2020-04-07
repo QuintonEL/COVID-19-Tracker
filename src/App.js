@@ -146,6 +146,7 @@ class App extends Component {
           <Cards data={data} />
           <CountryPicker handleCountryChange={this.handleCountryChange} />
           <Chart data={data} country={country}/>
+          Made with ❤ in Canada
         </div>
       </div>
     )
